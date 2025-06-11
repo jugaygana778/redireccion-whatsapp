@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redireccionando a WhatsApp...</title>
+  <style>
+    body {
+      background-color: #25d366; /* Color principal de WhatsApp */
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+
+    .container {
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .whatsapp-logo {
+      width: 80px;
+      margin-bottom: 20px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+  <script>
+    // Espera 2 segundos y luego redirige
+    setTimeout(function() {
+      const numero = '2235225487';
+      const mensaje = encodeURIComponent('quiero jugar con mi bon0 del 30%');
+      const url = `https://wa.me/54${numero}?text=${mensaje}`;
+      window.location.href = url;
+    }, 2000);
+  </script>
+</head>
+<body>
+  <div class="container">
+    <img class="whatsapp-logo" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Logo de WhatsApp" />
+    <h1>Redireccionando a WhatsApp...</h1>
+    <p>Espere un momento, lo estamos llevando a una conversación segura.</p>
+  </div>
+</body>
+</html>
